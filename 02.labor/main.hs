@@ -92,7 +92,7 @@ bSzamdSzj n b d
     | otherwise = if mod n b == d then 1+bSzamdSzj(div n b) b d else bSzamdSzj(div n b) b d
 --   ```
 ls3 = [(577578, 10, 7),(1024,2, 1),(2847, 2, 3)]
-bSzamSzjLs = map (\n, b, d -> bSzamdSzj n b d) ls3
+bSzamSzjLs = map (\(n, b, d) -> bSzamdSzj n b d) ls3
 -- - az 1000-ik Fibonacci számot.
 fibo 0=1
 fibo 1=1
